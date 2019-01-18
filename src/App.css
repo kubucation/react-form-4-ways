@@ -1,0 +1,58 @@
+body {
+  color: #282c34;
+}
+
+a {
+  color: #3a4c98;
+}
+
+.App .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #282c34;
+  padding: 35px 20px;
+}
+
+.App .header .logo {
+  font-weight: 100;
+  color: #fff;
+  font-size: 200%;
+}
+
+.App .header .title {
+  font-weight: 300;
+  color: #fff;
+  font-size: 150%;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.input-text {
+  margin-bottom: 12px;
+}
+
+.input-text .errorMessage {
+  color: #d64541;
+  font-size: 80%;
+}
+
+input[type='text'] {
+  display: block;
+  width: 90%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid grey;
+}
+
+button {
+  display: block;
+  padding: 10px;
+  min-width: 150px;
+  border-radius: 3px;
+  border: 1px solid #2ecc71;
+  background-color: #2ecc71;
+  color: #fff;
+  margin-bottom: 8px;
+}
