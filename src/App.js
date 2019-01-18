@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 import HTMLForm from './HTMLForm';
 import ControlledForm from './ControlledForm';
 import ReduxForm from './ReduxForm';
 import FinalForm from './FinalForm';
+import HTMLFormSummary from './summary/HTMLForm';
+import ControlledFormSummary from './summary/ControlledForm';
+import ReduxFormSummary from './summary/ReduxForm';
+import FinalFormSummary from './summary/FinalForm';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
 import {reducer as formReducer} from 'redux-form';
@@ -46,11 +50,26 @@ class App extends Component {
           </header>
           <Router>
             <div style={{padding: 20}}>
-              <Route path="/" exact component={Index} />
-              <Route path="/html-form/" component={HTMLForm} />
-              <Route path="/controlled-form/" component={ControlledForm} />
-              <Route path="/redux-form/" component={ReduxForm} />
-              <Route path="/final-form/" component={FinalForm} />
+              <Switch>
+                <Route path="/" exact component={Index} />
+                <Route path="/html-form/summary" component={HTMLFormSummary} />
+                <Route
+                  path="/controlled-form/summary"
+                  component={ControlledFormSummary}
+                />
+                <Route
+                  path="/redux-form/summary"
+                  component={ReduxFormSummary}
+                />
+                <Route
+                  path="/final-form/summary"
+                  component={FinalFormSummary}
+                />
+                <Route path="/html-form/" component={HTMLForm} />
+                <Route path="/controlled-form/" component={ControlledForm} />
+                <Route path="/redux-form/" component={ReduxForm} />
+                <Route path="/final-form/" component={FinalForm} />
+              </Switch>
               <Link to="/">Back to Overview</Link>
             </div>
           </Router>

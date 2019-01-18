@@ -1,5 +1,6 @@
 import React from 'react';
 import Input from './Input';
+import {Link} from 'react-router-dom';
 
 const ReduxForm = () => (
   <div>
@@ -13,6 +14,7 @@ const ReduxForm = () => (
       />
       <button type="submit">Submit</button>
     </form>
+    <Link to="summary">Conclusions</Link>
   </div>
 );
 

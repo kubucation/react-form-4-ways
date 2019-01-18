@@ -56,3 +56,11 @@ button {
   color: #fff;
   margin-bottom: 8px;
 }
+
+.advantages {
+  color: #2ecc71;
+}
+
+.disadvantages {
+  color: #d64541;
+}

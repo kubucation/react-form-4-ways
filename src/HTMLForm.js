@@ -1,5 +1,6 @@
 import React from 'react';
 import Input from './Input';
+import {Link} from 'react-router-dom';
 
 const HTMLForm = () => (
   <div>
@@ -12,6 +13,7 @@ const HTMLForm = () => (
         name="customer-id"
       />
       <button type="submit">Submit</button>
+      <Link to="summary">Conclusions</Link>
     </form>
   </div>
 );
