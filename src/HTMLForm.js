@@ -2,10 +2,15 @@ import React from 'react';
 import Input from './Input';
 import {Link} from 'react-router-dom';
 
+const handleSubmit = e => {
+  e.preventDefault();
+  alert(e.target['customer-id'].value);
+};
+
 const HTMLForm = () => (
   <div>
     <h2>Native Form</h2>
-    <form>
+    <form onSubmit={handleSubmit}>
       <Input
         type="text"
         label="Customer ID"

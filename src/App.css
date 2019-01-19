@@ -57,6 +57,11 @@ button {
   margin-bottom: 8px;
 }
 
+button[disabled] {
+  background-color: lightgrey;
+  border-color: lightgrey;
+}
+
 .advantages {
   color: #2ecc71;
 }
